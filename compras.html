@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja Aula</title>
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="shortcut icon" href="imagem/icone.ico" type="image/x-icon">
+  <script src="./js/script.js"></script>
+  
+</head>
+
+<body>
+  <!--Parte Superior do Site Header-->
+  <header>
+    <div class="content">
+      <nav>
+        <p class="brand">compre <strong>Bem</strong></p>
+        <ul>
+          <li><a href="./index.html">Início</a></li>
+          <a href="cadastro.html"><button>Login</button></a>
+        </ul>
+      </nav>
+      <div class="header-block">
+        <div class="text">
+          <h2>Compras</h2>  
+          <p>
+            Fique à vontade e faça suas compras!
+          </p>
+        </div>
+        <img src="imagem/note01.jpg" alt="note01" />
+      </div>
+  </header>
+
+  <!--catálogo-->
+  <section class="cadastro" id="cadastro">
+    <div class="content">
+      <form action="" method="POST">
+        <img src="./imagem/fundo.jpg" alt="">
+        <table>
+          <tr>
+            <td><label for="produto"> Produto</label></td>
+            <td ><input class="formata" type="text" name="nome" id="nome" size="120" value="Produto 01" readonly> </td>
+          </tr>
+          <tr>
+            <td><label for="quantidade">Quantidade<span>*</span></label></td>
+            <td><input class="formata" type="number" name="quantidade" id="quantidade" size="10" onchange="calcular()" required></td>
+          </tr>
+          <tr>
+            <td><label for="preco">Preço R$ </label></td>
+            <td><input class="formata" type="text" name="preco" id="preco" size="10" value="200" readonly>,00</td>
+          </tr>
+          <tr>
+            <td><label for="total">Total R$</label></td>
+            <td><input class="formata" type="text" name="total" id="total" size="10" readonly></td>
+          </tr>
+          </table>
+        <span>* preenchimento obrigatório</span>
+        <br>
+        <button class="formulario" type="submit" name="comprar" onclick="compra()">Comprar</button>
+        <button class="formulario" type="reset" name="limpar">Limpar Campos</button>
+      </form>
+    </div>
+  </section>
+
+
+  <!--Rodapé-->
+  <footer>
+    <div class="main">
+      <div class="content footer-links">
+        <div class="footer-company">
+          <h4>Empresa</h4>
+          <h6>Sobre</h6>
+          <h6>Contatos</h6>
+        </div>
+        <div class="footer-rental">
+          <h4>Aluguel</h4>
+          <h6>Self-Drive</h6>
+          <h6>Chauffer-Driven</h6>
+          <h6>Ajuda</h6>
+        </div>
+        <div class="footer-social">
+          <h4>Conecte-se</h4>
+          <div class="social-icons">
+            <img src="imagem/instagram.png" alt="Instagram" />
+            <img src="imagem/facebook.png" alt="Facebook" />
+          </div>
+        </div>
+        <div class="footer-contact">
+          <h4>Nossos Contatos</h4>
+          <h6>+55 21 999999999</h6>
+          <h6>contato@contato.com.br</h6>
+          <h6>Nome da Rua, Rio de Janeiro RJ</h6>
+        </div>
+      </div>
+    </div>
+    <div class="last">Técnico de Informática 2021 - Turma Mil</div>
+  </footer>
+</body>
+
+</html>

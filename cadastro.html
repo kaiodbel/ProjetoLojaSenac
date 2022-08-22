@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja Aula</title>
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="shortcut icon" href="imagem/icone.ico" type="image/x-icon">
+  <script src="./js/script.js"></script>
+</head>
+
+<body>
+  <!--Parte Superior do Site Header-->
+  <header>
+    <div class="content">
+      <nav>
+        <p class="brand">compre <strong>Bem</strong></p>
+        <ul>
+          <li><a href="./index.html">Início</a></li>
+            <li><a href="./compras.html">Compras</a></li>
+        </ul>
+      </nav>
+      <div class="header-block">
+        <div class="text">
+          <h2>Cadastro</h2>
+          <p>
+            Cadastre-se e receba seu produto no endereço informado com segurança!
+          </p>
+        </div>
+        <img src="imagem/note01.jpg" alt="note01" />
+      </div>
+  </header>
+
+  <!--catálogo-->
+  <section class="cadastro" id="cadastro">
+    <div class="content">
+      <form action="" method="POST">
+        <table>
+          <tr>
+            <td><label for="nome"> Nome<span>*</span></label></td>
+            <td colspan="3"><input class="formata" type="text" name="nome" id="nome" size="120" placeholder="Nome Completo" required></td>
+          </tr>
+          <tr>
+            <td><label for="cpf">CPF<span>*</span></label></td>
+            <td><input class="formata" type="text" name="cpf" id="cpf" size="50"  minlength="14" maxlength="14"
+                placeholder="somente números" onblur="formataCPF(this)" pattern="[0-9]{11}" required></td>
+            <td><label for="telefone">Telefone<span>*</span></label></td>
+            <td><input class="formata" type="text" name="telefone" id="telefone" size="50" onblur="formataTelefone(this)"  placeholder="somente números" minlength="14"   maxlength="14" pattern="[0-9]{11}" required></td>
+          </tr>
+          <tr>
+            <td><label for="data">Data<span>*</span></label></td>
+            <td><input  class="formata" type="date" name="data" id="data" required></td>
+            <td><label for="email">E-mail<span>*</span></label></td>
+            <td><input class="formata" type="email" name="email" id="email" placeholder="email@email.com" required></td>
+          </tr>
+        </table>
+        <br>
+        <fieldset>
+          <legend>Endereço Completo</legend>
+          <table>
+            <tr>
+              <td><label for="cep">Cep<span>*</span></label></td>
+              <td><input class="formata" type="text" name="cep" id="cep" size="20" placeholder="somente números"
+                  onblur="formataCEP(this);
+                  pesquisacep(this.value)"  required></td>
+            </tr>
+            <tr>
+              <td><label for="rua">Rua<span>*</span></label></td>
+              <td><input class="formata" type="text" name="rua" id="rua" size="50" placeholder="Rua"></td>
+              <td><label for="numreo">Número<span>*</span></label></td>
+              <td><input class="formata" type="number" name="numero" id="numero" required></td>
+            </tr>
+            <tr>
+              <td><label for="complemento">Complemento<span>*</span></label></td>
+              <td><input class="formata" type="text" name="complemento" id="complemento" size="50" required placeholder="complemento"></td>
+              <td><label for="bairro">Bairro<span>*</span></label></td>
+              <td><input class="formata" type="text" name="bairro" id="bairro" size="50" required placeholder="bairro" ></td>
+            </tr>
+
+            <tr>
+              <td><label for="cidade">Cidade<span>*</span></label></td>
+              <td><input class="formata" type="text" name="cidade" id="cidade" placeholder="cidade" required> </td>
+              <td><label for="uf">Estado<span>*</span></label></td>
+              <td><input class="formata" type="text" name="uf" id="uf" placeholder="uf" readonly required> </td>
+            </tr>
+          </table>
+        </fieldset>
+        <span>* preenchimento obrigatório</span>
+        <br>
+        <button class="formulario" type="submit" name="cadastrar" onclick="cadastro()">Cadastrar</button>
+        <button class="formulario" type="reset" name="limpar">Limpar Campos</button>
+      </form>
+    </div>
+  </section>
+
+
+  <!--Rodapé-->
+  <footer>
+    <div class="main">
+      <div class="content footer-links">
+        <div class="footer-company">
+          <h4>Empresa</h4>
+          <h6>Sobre</h6>
+          <h6>Contatos</h6>
+        </div>
+        <div class="footer-rental">
+          <h4>Aluguel</h4>
+          <h6>Self-Drive</h6>
+          <h6>Chauffer-Driven</h6>
+          <h6>Ajuda</h6>
+        </div>
+        <div class="footer-social">
+          <h4>Conecte-se</h4>
+          <div class="social-icons">
+            <img src="imagem/instagram.png" alt="Instagram" />
+            <img src="imagem/facebook.png" alt="Facebook" />
+          </div>
+        </div>
+        <div class="footer-contact">
+          <h4>Nossos Contatos</h4>
+          <h6>+55 21 999999999</h6>
+          <h6>contato@contato.com.br</h6>
+          <h6>Nome da Rua, Rio de Janeiro RJ</h6>
+        </div>
+      </div>
+    </div>
+    <div class="last">Técnico de Informática 2021 - Turma Mil</div>
+  </footer>
+</body>
+
+</html>
